@@ -22,6 +22,7 @@ with open(filename) as f:
 
 content = [x.split("|", 1)[0] for x in content]
 content.pop(0)
+content.remove("HUGE")
 
 class stock:
   def __init__(self, ticker, r, averageDailyVolume10Day, volume, fiftyDayAverage, ask, open, dayLow, dayHigh):
@@ -67,12 +68,13 @@ for u in Rurl:
                 else:
                     existingPennys = existingPennys + " " + x
                     cur = yf.Ticker(x)
+                    print(x)
+                    print(i)
                     if cur.info["dayLow"] < 5:
-                        # print(x)
-                        # print(i)
                         pennys.append(stock(x, 1, cur.info["averageDailyVolume10Day"], cur.info["volume"], 
                             cur.info["fiftyDayAverage"], cur.info["ask"], cur.info["open"], cur.info["dayLow"], 
                             cur.info["dayHigh"]))
+                    print("a")
 
 for x in pennys:
     print(x.ticker + ": " + x.r)
