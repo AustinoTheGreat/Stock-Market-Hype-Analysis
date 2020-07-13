@@ -77,7 +77,7 @@ for u in Rurl:
                         pennys.append(stock(x, 1, cur.info["averageDailyVolume10Day"], cur.info["volume"], 
                             cur.info["fiftyDayAverage"], cur.info["ask"], cur.info["open"], cur.info["dayLow"], 
                             cur.info["dayHigh"]))
-                    print("a")
+                    # print("a")
 
 for x in pennys:
     print(x.ticker + ": " + str(x.r))
