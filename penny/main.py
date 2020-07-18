@@ -2,7 +2,7 @@ import praw
 import requests
 import urllib.request
 import time
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import yfinance as yf
 import re
 
